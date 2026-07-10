@@ -76,7 +76,7 @@ void print_holst_and_matrix(std::vector<std::vector<int>> &matrix_holst)
         i++;
     }
     string_holst += bot_border;
-    std::cout << string_holst + buttons + top_board + '\0';
+    std::cout << string_holst + buttons + '\0';
 }
 
 bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
@@ -113,20 +113,20 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 2))
                 {
                     button_pressed = true;
-                    std::cout << "  Вы нарисовали " << GetResult(matrix_weight_layer, matrix_holst) << "\n";
+                    std::cout << "    Вы нарисовали " << GetResult(matrix_weight_layer, matrix_holst) << "\n";
                     system("pause");
                 }
                 else if ((cursorPos.x <= 40 + 60 * 3))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 0, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                 }
                 else if ((cursorPos.x <= 40 + 60 * 4))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 1, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -134,7 +134,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 5))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 2, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -142,7 +142,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 6))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 3, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -150,7 +150,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 7))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 4, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -183,7 +183,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                         //     epoch++;
                         // } while (TestingOnImages(matrix_weight_layer, COUNT_IMAGES, "train") != 100);
                     }
-                    std::cout << "Эпоха " << epoch;
+                    std::cout << "    Эпоха " << epoch;
 
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -192,13 +192,13 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 {
                     button_pressed = true;
                     float last = TestingOnImages(matrix_weight_layer, COUNT_IMAGES);
-                    std::cout << "Процент правильных ответов при тестировании на " << COUNT_IMAGES * 10 << "  " << last << "\n";
+                    std::cout << "    Процент правильных ответов при тестировании на " << COUNT_IMAGES * 10 << "  " << last << "\n";
                     system("pause");
                 }
                 else if ((cursorPos.x <= 40 + 60 * 3))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 5, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -206,7 +206,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 4))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 6, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -214,7 +214,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 5))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 7, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -222,7 +222,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 6))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 8, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
@@ -230,7 +230,7 @@ bool check_holst(std::vector<std::vector<int>> &matrix_holst, POINT &cursorPos)
                 else if ((cursorPos.x <= 40 + 60 * 7))
                 {
                     button_pressed = true;
-                    std::cout << "Обученна\n";
+                    std::cout << "    Обученна\n";
                     Traning(matrix_weight_layer, matrix_holst, 9, learning_rate);
                     SaveWeights(matrix_weight_layer, "weight_layer");
                     system("pause");
